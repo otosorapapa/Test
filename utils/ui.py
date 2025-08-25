@@ -6,7 +6,7 @@ def topbar():
         """
 <div class="topbar">
   <div style="display:flex; justify-content:space-between; align-items:center;">
-    <div class="brand"><span class="emoji">📝</span> keiei_exam_app_pro <span style="opacity:.85;font-weight:500;">v17</span></div>
+    <div class="brand"><span class="emoji">📝</span> keiei_exam_app_pro <span style="opacity:.85;font-weight:500;">v17</span><span class="chip active">AI</span></div>
     <div class="right">
       <span>ショートカット:</span>
       <span class="kbd">Ctrl+K</span>

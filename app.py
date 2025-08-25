@@ -20,7 +20,7 @@ st.sidebar.markdown("### ヒント")
 st.sidebar.write("『演習 → AI見本 → 清書 → 自己採点 → 外部出力』の順で効率UP。")
 
 st.title("All-in-One パッケージ（Calm Blue）")
-st.caption("安定化の互換レイヤー＋落ち着いたブルー基調デザイン＋主要ページを同梱")
+st.caption("安定化の互換レイヤー＋落ち着いたブルー基調デザイン＋主要ページ＋生成AI連携を同梱")
 
 st.markdown(
     """

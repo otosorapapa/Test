@@ -3,6 +3,7 @@ from pathlib import Path
 import streamlit as st
 from utils.common import grade_answer, export_markdown, to_easy, load_json
 from utils import ui
+from utils.ai_gen import generate_answer
 
 ui.topbar()
 st.title("✍️ 2_演習")
@@ -45,12 +46,18 @@ else:
 
 ui.section("📝 解答エディタ", badge="作成")
 answer = st.text_area("答案（ここに清書）", value=st.session_state.get("answer_text", ""), height=260, key="answer_text")
-colA, colB = st.columns(2)
+colA, colB, colC = st.columns(3)
 with colA:
+    if st.button("🤖 AI見本（生成AI）", use_container_width=True):
+        prompt = (
+            selected.get("設問文", "") if "selected" in locals() else answer
+        ) or "生成AIによる模範解答を作成してください。"
+        st.session_state["ai_sample"] = generate_answer(prompt)
+with colB:
     if st.button("🤖 AI見本（やさしい文）", use_container_width=True):
         sample = to_easy(answer or "課題・方策・評価を順に述べ、600字程度でまとめてください。")
         st.session_state["ai_sample"] = sample
-with colB:
+with colC:
     if st.button("🪄 やさしく言い換え", use_container_width=True):
         st.session_state["answer_text"] = to_easy(answer)
 

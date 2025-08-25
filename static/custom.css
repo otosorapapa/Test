@@ -29,14 +29,16 @@ html, body, [data-testid="stAppViewContainer"]{
   background: var(--bg) !important;
   color: var(--ink);
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji",sans-serif;
+  line-height:1.6;
+  font-size:16px;
 }
 
 .block-container{ padding-top: 1.1rem !important; }
 
 .topbar{
   position: sticky; top: 0; z-index: 999;
-  background: linear-gradient(90deg, var(--blue-900), var(--blue-700));
-  color: #fff; padding: .72rem 1rem; margin: -1rem -1rem 1rem -1rem;
+  background: linear-gradient(90deg, var(--blue-800), var(--blue-600));
+  color: #fff; padding: .8rem 1.2rem; margin: -1rem -1rem 1rem -1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
 .topbar .brand{ font-weight:700; letter-spacing:.2px; display:flex; gap:.6rem; align-items:center; }
@@ -56,8 +58,8 @@ html, body, [data-testid="stAppViewContainer"]{
 .chip{ display:inline-block; padding:.2rem .6rem; border-radius:999px; background:var(--blue-100); color:var(--blue-800); border:1px solid var(--border); margin:.15rem .25rem .15rem 0; }
 .chip.active{ background:var(--blue-200); border-color: var(--blue-400); }
 
-.stButton>button{ border-radius:.6rem !important; border:1px solid var(--blue-400) !important; background: linear-gradient(#fdfefe, #f6fbff) !important; color: var(--blue-900) !important; box-shadow: var(--shadow) !important; }
-.stButton>button:hover{ border-color: var(--blue-600) !important; }
+.stButton>button{ border-radius:.6rem !important; border:1px solid var(--blue-400) !important; background: linear-gradient(#fdfefe, #f6fbff) !important; color: var(--blue-900) !important; box-shadow: var(--shadow) !important; transition:background .2s; }
+.stButton>button:hover{ border-color: var(--blue-600) !important; background: linear-gradient(#ffffff,#f0f7ff) !important; }
 .stDownloadButton>button{ border-radius:.6rem; box-shadow: var(--shadow); }
 .stTextInput>div>div>input, .stTextArea textarea, .stSelectbox div[data-baseweb="select"]{ border-radius:.6rem !important; border:1px solid var(--border) !important; }
 .stProgress > div > div > div > div{ background-color: var(--blue-600); }
